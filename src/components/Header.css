@@ -1,0 +1,44 @@
+/*  src/Title.css  */
+.Header {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: rgb(255, 255, 255);
+    color: #096A2E;
+  }
+  
+  .Header img {
+    padding: 0;
+    margin: 0 0.25em 0.25em 0;
+    height: 150px
+  }
+  
+  .Header-Subtitle {
+    color: rgba(9, 106, 46, 0.85);
+    margin-bottom: 1em;
+    font-size: 1.75em;
+    font-family: 'Nunito';
+  }
+  
+  .Header-Buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .Header a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: rgba(255, 255, 255, 0.835);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .Header .nav-link-active {
+    color: #fff;
+    border-bottom: 2px solid;
+  }
