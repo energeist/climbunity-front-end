@@ -8,7 +8,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <title>Climbunity</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
     <App />
   </React.StrictMode>
 );
