@@ -14,17 +14,17 @@ context.keys().forEach((key) => {
 });
 
 console.log(all.animal_crackers_wall);
-
 console.log("keys");
 console.log(dataKeys);
 
 function ClimbingAreas() {
+
   return (
     <div className="ClimbingAreas">
       <h1>Climbing Areas</h1>
       <p>{animalCrackers.area_name}</p>
     </div>
-  );
+  )
 }
 
 console.log(animalCrackers.area_name);

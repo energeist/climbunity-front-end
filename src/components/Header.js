@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import logo from './logo-no-background.png';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
@@ -12,18 +12,18 @@ function Header() {
           Local climbing area information
         </div>
         <div className="Header-Buttons">
-          {/* <NavLink 
+          <NavLink 
             className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
             to="/"
             >
-              List
+              Climbing Wall List
           </NavLink>
           <NavLink 
             className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
             to="/about"
             >
-              About
-          </NavLink> */}
+              About Climbunity
+          </NavLink>
         </div>
       </header>
     </div>
