@@ -14,7 +14,7 @@ context.keys().forEach((key) => {
   all[namespace] = JSON.parse(JSON.stringify(resource));
 });
 
-console.log(all.animal_crackers_wall);
+console.log(all);
 
 console.log("keys");
 console.log(dataKeys);
@@ -23,11 +23,23 @@ function ClimbingWall() {
 
   return (
     <div className="Wall">
-      <h1>Climbing Areas</h1>
+      <h1>Climbing Walls</h1>
     </div>
   )
 }
 
+dataKeys.forEach((key) => {
+  console.log(key)
+  console.log(all[key].area_name)
+  all[key].climbs.forEach((climb) => {
+    console.log(climb.name)
+    console.log(climb.yds)
+    console.log(climb.fa)
+    Object.keys(climb['type']).forEach((type) => {
+      console.log(type)
+    })
+  })
+})
 console.log(animalCrackers.area_name);
 console.log(animalCrackers.climbs);
 
