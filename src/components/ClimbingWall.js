@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import animalCrackers from '../data/animal_crackers_wall.json';
-
 import './ClimbingWall.css';
 
 const context = require.context('../data', true, /.json$/);
@@ -25,15 +25,19 @@ function ClimbingWall() {
 
   const walls = dataKeys.map((key) => {
     return (
-      <div>
-        <h1>{all_walls[key].area_name}</h1>
+      <div className="WallList">
+        <Link 
+          className="ClimbingWall-title"
+          to={`/wall`}>
+          <h1>{all_walls[key].area_name}</h1>
+        </Link>
         <p>Number of routes: {all_walls[key].totalClimbs}</p>
       </div>
     )
   })
-  
+
   return (
-    <div className="Wall">
+    <div className="WallList">
       {walls.length > 0 ? walls : "No results match your search"}
     </div>
   )

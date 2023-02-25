@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 import App from './components/App';
 import ClimbingWall from './components/ClimbingWall';
+import ClimbingAreas from './components/ClimbingAreas';
 import About from './components/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,9 +15,11 @@ root.render(
   <Router>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route path="/" element={<ClimbingWall />} />
+        {/* <Route path="/" element={<ClimbingArea />} /> */}
+        <Route path="/wall" element={<ClimbingWall />} />
+        <Route path="/" element={<ClimbingAreas />} />
         <Route path="about" element={<About />} />
-        {/* <Route path="/details/:id" element={<POPOSDetails />} /> */}
+        {/* <Route path="/route/:routeId" element={<ClimbingRoute />} /> */}
       </Route>
     </Routes>
   </Router>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import animalCrackers from '../data/animal_crackers_wall.json';
 import './ClimbingAreas.css';
 
@@ -21,8 +22,12 @@ function ClimbingAreas() {
 
   return (
     <div className="ClimbingAreas">
-      <h1>Climbing Areas</h1>
-      <p>{animalCrackers.area_name}</p>
+        <Link 
+          className="ClimbingArea-title"
+          to={`/wall`}>
+          Muir Valley
+        </Link>
+      {/* <p>{animalCrackers.area_name}</p> */}
     </div>
   )
 }
