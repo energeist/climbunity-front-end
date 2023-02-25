@@ -19,10 +19,10 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/" element={<ClimbingAreasList />} />
-          <Route path="/area" element={<ClimbingArea />} />
+          <Route path="/area" element={<ClimbingWall />} />
           <Route path="/wall" element={<ClimbingRoute />} />
           <Route path="/about" element={<About />} />
-          <Route path="/details/" element={<ClimbingRouteDetails />} />
+          <Route path="/route" element={<ClimbingRouteDetails />} />
         </Route>
       </Routes>
     </Router>

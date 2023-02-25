@@ -16,7 +16,7 @@ function Header() {
             className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
             to="/"
             >
-              Climbing Wall List
+              Climbing Areas
           </NavLink>
           <NavLink 
             className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }

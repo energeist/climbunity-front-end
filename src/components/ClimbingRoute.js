@@ -22,9 +22,10 @@ function ClimbingRoute(props) {
       // </div>
 
       <div>
+        <p>CLIMBING ROUTE</p>
         <Link
-          className="ClimbingArea-title"
-          to={`/details`}
+          className="ClimbingRoute-title"
+          to={`/route`}
         >
           <h1>Route</h1>
         </Link>

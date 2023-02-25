@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import animalCrackers from '../data/animal_crackers_wall.json';
 import './ClimbingAreasList.css';
+import ClimbingArea from './ClimbingArea';
 
 // const context = require.context('../data', true, /.json$/);
 // const all = {};
@@ -18,16 +19,17 @@ import './ClimbingAreasList.css';
 // console.log("keys");
 // console.log(dataKeys);
 
-function ClimbingAreas() {
+function ClimbingAreaList() {
   return (
     <div className="ClimbingAreasList">
       <p>AREA LIST</p>
-        <Link 
+        <ClimbingArea />
+        {/* <Link 
           className="ClimbingArea-title"
           to={`/area`}>
           Muir Valley
-        </Link>
-        <p>Number of walls: 33</p>
+        </Link> */}
+        {/* <p>Number of walls: 33</p> */}
     </div>
   )
 }
@@ -35,4 +37,4 @@ function ClimbingAreas() {
 console.log(animalCrackers.area_name);
 console.log(animalCrackers.climbs);
 
-export default ClimbingAreas;
+export default ClimbingAreaList;
