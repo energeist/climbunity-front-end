@@ -4,25 +4,28 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import App from './components/App';
+import ClimbingAreasList from './components/ClimbingAreasList';
+import ClimbingArea from './components/ClimbingWall';
 import ClimbingWall from './components/ClimbingWall';
-import ClimbingAreas from './components/ClimbingAreas';
+import ClimbingRoute from './components/ClimbingRoute';
+import ClimbingRouteDetails from './components/ClimbingRouteDetails';
 import About from './components/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <title>Climbunity</title>
-  <Router>
-    <Routes>
-      <Route path="/" element={<App />}>
-        {/* <Route path="/" element={<ClimbingArea />} /> */}
-        <Route path="/wall" element={<ClimbingWall />} />
-        <Route path="/" element={<ClimbingAreas />} />
-        <Route path="about" element={<About />} />
-        {/* <Route path="/route/:routeId" element={<ClimbingRoute />} /> */}
-      </Route>
-    </Routes>
-  </Router>
+    <title>Climbunity</title>
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="/" element={<ClimbingAreasList />} />
+          <Route path="/area" element={<ClimbingArea />} />
+          <Route path="/wall" element={<ClimbingRoute />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/details/" element={<ClimbingRouteDetails />} />
+        </Route>
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

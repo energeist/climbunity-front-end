@@ -28,7 +28,8 @@ function ClimbingWall() {
       <div className="WallList">
         <Link 
           className="ClimbingWall-title"
-          to={`/wall`}>
+          to={`/wall`}
+        >
           <h1>{all_walls[key].area_name}</h1>
         </Link>
         <p>Number of routes: {all_walls[key].totalClimbs}</p>
