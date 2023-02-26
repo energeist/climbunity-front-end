@@ -13,22 +13,17 @@ context.keys().forEach((key) => {
   allWalls[namespace] = JSON.parse(JSON.stringify(resource));
 });
 
-console.log("keys");
-console.log(dataKeys);
+// console.log("keys");
+// console.log(dataKeys);
 
 function ClimbingWall() {
-  console.log("all walls")
-  console.log(allWalls)
-  console.log("data keys")
-  console.log(dataKeys)
-
   const walls = dataKeys.map((key) => {
     return (
-      <div className="WallList">
+      <div className="WallList" key={key}>
         <p>CLIMBING WALL</p>
         <Link 
           className="ClimbingWall-title"
-          to={`/wall`}
+          to={`/wall/${key}`}
         >
           <h1>{allWalls[key].area_name}</h1>
         </Link>

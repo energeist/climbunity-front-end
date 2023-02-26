@@ -1,40 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import animalCrackers from '../data/animal_crackers_wall.json';
 import './ClimbingAreasList.css';
 import ClimbingArea from './ClimbingArea';
-
-// const context = require.context('../data', true, /.json$/);
-// const all = {};
-// const dataKeys = [];
-// context.keys().forEach((key) => {
-//   const fileName = key.replace('./', '');
-//   const resource = require(`../data/${fileName}`);
-//   const namespace = fileName.replace('.json', '');
-//   dataKeys.push(namespace);
-//   all[namespace] = JSON.parse(JSON.stringify(resource));
-// });
 
 // console.log(all.animal_crackers_wall);
 // console.log("keys");
 // console.log(dataKeys);
 
-function ClimbingAreaList() {
+function ClimbingAreaList(props) {
+  console.log("allWalls in ClimbingAreaList ")
+  const allWalls = props.props
+  const wallKeys = Object.keys(allWalls)
+  console.log(wallKeys.length)
+  console.log(allWalls)
   return (
     <div className="ClimbingAreasList">
       <p>AREA LIST</p>
-        <ClimbingArea />
-        {/* <Link 
-          className="ClimbingArea-title"
-          to={`/area`}>
-          Muir Valley
-        </Link> */}
-        {/* <p>Number of walls: 33</p> */}
+        {/* hardcoded for now, might expand data out later */}
+        <ClimbingArea areaName={'Muir Valley'} numWalls={wallKeys.length} path={'muir_valley'} data={allWalls}/>
+        <ClimbingArea areaName={'Not Muir Valley'} numWalls={0}/>
     </div>
   )
 }
-
-console.log(animalCrackers.area_name);
-console.log(animalCrackers.climbs);
 
 export default ClimbingAreaList;

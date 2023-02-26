@@ -5,7 +5,10 @@ import Header from './Header';
 import Footer from './Footer';
 import { Outlet } from 'react-router-dom';
 
-function App() {
+function App(props) {
+  console.log("allWalls in App")
+  // const allWalls = props.props
+  console.log(props.props)
   return (
     <div className="App">
       <Header />
