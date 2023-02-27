@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import './ClimbingAreasList.css';
 
 function ClimbingArea(props) {
-  const {areaName, numWalls, path} = props
-  // console.log("allWalls in ClimbingArea")
+  const {areaName, numWalls} = props
   return (
     <div className="ClimbingAreas">
         <Link 

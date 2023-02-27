@@ -13,9 +13,6 @@ context.keys().forEach((key) => {
   allWalls[namespace] = JSON.parse(JSON.stringify(resource));
 });
 
-// console.log("keys");
-// console.log(dataKeys);
-
 function ClimbingWall() {
   const walls = dataKeys.map((key) => {
     return (
@@ -37,20 +34,5 @@ function ClimbingWall() {
     </div>
   )
 }
-
-// dataKeys.forEach((key) => {
-//   console.log(key)
-//   console.log(all_walls[key].area_name)
-//   all_walls[key].climbs.forEach((climb) => {
-//     console.log(climb.name)
-//     console.log(climb.yds)
-//     console.log(climb.fa)
-//     Object.keys(climb['type']).forEach((type) => {
-//       console.log(type)
-//     })
-//   })
-// })
-// console.log(animalCrackers.area_name);
-// console.log(animalCrackers.climbs);
 
 export default ClimbingWall;
