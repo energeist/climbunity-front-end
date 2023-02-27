@@ -3,11 +3,16 @@ import { Link, useLocation } from 'react-router-dom';
 import './ClimbingRoute.css';
 
 function ClimbingRoute(props) {
+  const [ query, setQuery ] = useState('');
   const allWalls = props.props
   const location = useLocation()
   const wallKey = location.pathname.replace('/wall/','')
   const wallRoutes = allWalls[`${wallKey}`].climbs
-  const routes = wallRoutes.map((route, index) => {
+  console.log(wallRoutes)
+  const routes = wallRoutes.filter((obj) => {
+    const inName = obj.name.toLowerCase().includes(query.toLowerCase())
+    const inYDSGrade = obj.grades.yds.toLowerCase().includes(query.toLowerCase())
+    return inName || inYDSGrade }).map((route, index) => {
     return (
       <div className="RouteCard" key={route.name}>
         <Link 
@@ -25,8 +30,17 @@ function ClimbingRoute(props) {
   })
 
   return (
-    <div className="RouteList">
-      {routes.length > 0 ? routes : "No results match your search"}
+    <div className="RouteSearch">
+      <form>
+        <input
+          value={query}
+          placeholder="Search this page:"
+          onChange={(evt) => setQuery(evt.target.value)}
+        />
+      </form>
+      <div className="RouteList">
+        {routes.length > 0 ? routes : "No results match your search"}
+      </div>
     </div>
   )
 }
