@@ -6,8 +6,6 @@ function ClimbingWall(props) {
   const [ query, setQuery ] = useState('');
   const allWalls = props.props
   const dataKeys = Object.keys(allWalls)
-  console.log("dataKeys")
-  console.log(dataKeys)
   const data = Object.values(allWalls)
   const walls = data.filter((obj) => {
     const inName = obj.area_name.toLowerCase().includes(query.toLowerCase())
