@@ -8,19 +8,19 @@ function ClimbingRoute(props) {
   const location = useLocation()
   const wallKey = location.pathname.replace('/wall/','')
   const wallRoutes = allWalls[`${wallKey}`].climbs
-  console.log(wallRoutes)
+  const routeNames = []
+  wallRoutes.forEach((climb) => routeNames.push(climb.name)) // do this because computer is hard (fixes indexing issue with filter)
   const routes = wallRoutes.filter((obj) => {
     const inName = obj.name.toLowerCase().includes(query.toLowerCase())
     const inYDSGrade = obj.grades.yds.toLowerCase().includes(query.toLowerCase())
     const inFrenchGrade = obj.grades.french.toLowerCase().includes(query.toLowerCase())
     const inType = query.toLowerCase() in obj.type // this is a little jank but it works well enough, will search for 'sport', 'trad', 'aid' or 'tr'
-
     return inName || inYDSGrade || inFrenchGrade || inType }).map((route, index) => {
     return (
       <div className="RouteCard" key={route.name}>
         <Link 
           className="ClimbingRoute-title"
-          to={`/route/${wallKey}-${index}-${(route.name).toLowerCase().split(' ').join('_')}`}
+          to={`/route/${wallKey}-${routeNames.indexOf(route.name)}-${(route.name).toLowerCase().split(' ').join('_')}`}
         >
           <h1>{route.name}</h1>
         </Link>
