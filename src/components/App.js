@@ -6,9 +6,9 @@ import Footer from './Footer';
 import { Outlet } from 'react-router-dom';
 
 function App(props) {
-  console.log("allWalls in App")
-  // const allWalls = props.props
-  console.log(props.props)
+  // console.log("allWalls in App")
+  const allWalls = props.props
+  // console.log(allWalls)
   return (
     <div className="App">
       <Header />

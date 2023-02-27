@@ -20,7 +20,6 @@ function ClimbingWall() {
   const walls = dataKeys.map((key) => {
     return (
       <div className="WallList" key={key}>
-        <p>CLIMBING WALL</p>
         <Link 
           className="ClimbingWall-title"
           to={`/wall/${key}`}

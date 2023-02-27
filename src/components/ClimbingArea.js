@@ -4,10 +4,9 @@ import './ClimbingAreasList.css';
 
 function ClimbingArea(props) {
   const {areaName, numWalls, path} = props
-  console.log("allWalls in ClimbingArea")
+  // console.log("allWalls in ClimbingArea")
   return (
     <div className="ClimbingAreas">
-      <p>CLIMBING AREA</p>
         <Link 
           className="ClimbingArea-title"
           to={`/area/muir-valley`}>

@@ -7,17 +7,16 @@ import ClimbingArea from './ClimbingArea';
 // console.log(dataKeys);
 
 function ClimbingAreaList(props) {
-  console.log("allWalls in ClimbingAreaList ")
+  // console.log("allWalls in ClimbingAreaList ")
   const allWalls = props.props
   const wallKeys = Object.keys(allWalls)
-  console.log(wallKeys.length)
-  console.log(allWalls)
+  // console.log(wallKeys.length)
+  // console.log(allWalls)
   return (
     <div className="ClimbingAreasList">
-      <p>AREA LIST</p>
         {/* hardcoded for now, might expand data out later */}
         <ClimbingArea areaName={'Muir Valley'} numWalls={wallKeys.length} path={'muir_valley'} data={allWalls}/>
-        <ClimbingArea areaName={'Not Muir Valley'} numWalls={0}/>
+        <ClimbingArea areaName={'Also Muir Valley'} numWalls={0}/>
     </div>
   )
 }
