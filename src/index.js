@@ -21,9 +21,6 @@ context.keys().forEach((key) => {
   allWalls[namespace] = JSON.parse(JSON.stringify(resource));
 });
 
-console.log("allWalls in index")
-console.log(allWalls)
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

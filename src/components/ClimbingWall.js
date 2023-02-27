@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ClimbingWall.css';
 
-const context = require.context('../data', true, /.json$/);
-const allWalls = {};
-const dataKeys = [];
-context.keys().forEach((key) => {
-  const fileName = key.replace('./', '');
-  const resource = require(`../data/${fileName}`);
-  const namespace = fileName.replace('.json', '');
-  dataKeys.push(namespace);
-  allWalls[namespace] = JSON.parse(JSON.stringify(resource));
-});
-
-function ClimbingWall() {
-  const walls = dataKeys.map((key) => {
+function ClimbingWall(props) {
+  const [ query, setQuery ] = useState('');
+  const allWalls = props.props
+  const dataKeys = Object.keys(allWalls)
+  console.log("dataKeys")
+  console.log(dataKeys)
+  const data = Object.values(allWalls)
+  const filterWalls = data.filter((obj) => {
+    const inNamee = obj.area_name.toLowerCase().includes(query.toLowerCase())
+    return inNamee }).map((wall) => { return console.log(wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase())
+  })
+  // const wallSearch = allWalls.filter((obj) => {
+  //   const inName = obj.name.toLowerCase().includes(query.toLowerCase())
+  //   return inName }).map((key) => {return console.log(key)})
+  // console.log(wallSearch)
+  const walls = dataKeys.filter((obj) => {
+    const inName = true
+    return inName }).map((key) => {
     return (
       <div className="WallList" key={key}>
         <Link 
@@ -29,8 +34,17 @@ function ClimbingWall() {
   })
 
   return (
-    <div className="WallList">
-      {walls.length > 0 ? walls : "No results match your search"}
+    <div className="RouteSearch">
+      <form>
+        <input
+          value={query}
+          placeholder="Search this page:"
+          onChange={(evt) => setQuery(evt.target.value)}
+        />
+      </form>
+      <div className="WallList">
+        {walls.length > 0 ? walls : "No results match your search"}
+      </div>
     </div>
   )
 }

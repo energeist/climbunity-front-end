@@ -12,7 +12,10 @@ function ClimbingRoute(props) {
   const routes = wallRoutes.filter((obj) => {
     const inName = obj.name.toLowerCase().includes(query.toLowerCase())
     const inYDSGrade = obj.grades.yds.toLowerCase().includes(query.toLowerCase())
-    return inName || inYDSGrade }).map((route, index) => {
+    const inFrenchGrade = obj.grades.french.toLowerCase().includes(query.toLowerCase())
+    const inType = query.toLowerCase() in obj.type // this is a little jank but it works well enough, will search for 'sport', 'trad', 'aid' or 'tr'
+
+    return inName || inYDSGrade || inFrenchGrade || inType }).map((route, index) => {
     return (
       <div className="RouteCard" key={route.name}>
         <Link 

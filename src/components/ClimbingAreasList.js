@@ -2,16 +2,9 @@ import React from 'react';
 import './ClimbingAreasList.css';
 import ClimbingArea from './ClimbingArea';
 
-// console.log(all.animal_crackers_wall);
-// console.log("keys");
-// console.log(dataKeys);
-
 function ClimbingAreaList(props) {
-  // console.log("allWalls in ClimbingAreaList ")
   const allWalls = props.props
   const wallKeys = Object.keys(allWalls)
-  // console.log(wallKeys.length)
-  // console.log(allWalls)
   return (
     <div className="ClimbingAreasList">
         {/* hardcoded for now, might expand data out later */}

@@ -1,19 +1,13 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-// import { useParams } from 'react-router';
 import './ClimbingRouteDetails.css';
 
 function ClimbingRouteDetails(props) {
-  
-  // const params = useParams();
-  // const { id } = params;// Location index
-  // const { images, name, desc, hours, geo } = data[id];
   
   const location = useLocation()
   const wallKey = location.pathname.replace('/route/','').split('-')[0]
   const routeKey = location.pathname.replace('/route/','').split('-')[1]
   const currentRoute = props.props[`${wallKey}`].climbs[routeKey]
-  console.log(Object.keys(currentRoute.type)[0])
   return (
     <div className="ClimbingRouteDetails">
       <div className="ClimbingRouteDetails-image">
@@ -28,7 +22,7 @@ function ClimbingRouteDetails(props) {
         <p className="ClimbingRouteDetails-grade"><strong>Route type(s):</strong> {Object.keys(currentRoute.type)
           .map((type)=>{
             return(
-             <span>{type}</span> 
+             <span key={type}>{type}</span> 
             )
           })}</p>
         <p className="ClimbingRouteDetails-desc"><strong>Description:</strong>  {currentRoute.content.description}</p>
