@@ -4,6 +4,7 @@ import ClimbingArea from './ClimbingArea';
 
 function ClimbingAreaList(props) {
   const allWalls = props.props
+  console.log(allWalls)
   const wallKeys = Object.keys(allWalls)
   return (
     <div className="ClimbingAreasList">

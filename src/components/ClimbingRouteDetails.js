@@ -15,7 +15,7 @@ function ClimbingRouteDetails(props) {
       </div>
       <div className="ClimbingRouteDetails-info">
         <h1 className="ClimbingRouteDetails-name">{currentRoute.name}</h1>
-        <p className="ClimbingRouteDetails-grade"><strong>Grade:</strong> 
+        <p className="ClimbingRouteDetails-grade"><strong>Grade:</strong>
           {currentRoute.grades.yds ? <span><strong>YDS</strong>  - {currentRoute.grades.yds} | </span> : ''}  
           {currentRoute.grades.french ? <span><strong>French</strong>  - {currentRoute.grades.french}</span> : ''} 
         </p>
@@ -25,11 +25,18 @@ function ClimbingRouteDetails(props) {
              <span key={type}>{type}</span> 
             )
           })}</p>
-        <p className="ClimbingRouteDetails-desc"><strong>Description:</strong>  {currentRoute.content.description}</p>
-        <p className="ClimbingRouteDetails-desc"><strong>Location:</strong>  {currentRoute.content.location}</p>
-        <p className="ClimbingRouteDetails-desc"><strong>Protection:</strong>  {currentRoute.content.protection}</p>
+        <p className="ClimbingRouteDetails-desc"><strong>Description: </strong>  
+          {currentRoute.content.description ? currentRoute.content.description : "Nothing listed"}
+        </p>
+        <p className="ClimbingRouteDetails-desc"><strong>Location: </strong> 
+          {currentRoute.content.location ? currentRoute.content.location : "Nothing listed"}
+        </p>
+        <p className="ClimbingRouteDetails-desc"><strong>Protection: </strong>
+          {currentRoute.content.protection ? currentRoute.content.protection : "Nothing listed"}
+        </p>
         <p className="ClimbingRouteDetails-geo"><em><strong>lat:</strong>  </em>{currentRoute.metadata.lnglat.coordinates[1]} <em>lon: </em>{currentRoute.metadata.lnglat.coordinates[0]}</p>
-        <p className="ClimbingRouteDetails-fa"><strong>First Ascent By:</strong>  {currentRoute.fa}</p>
+        <p className="ClimbingRouteDetails-fa"><strong>First Ascent By: </strong> 
+          {currentRoute.fa ? currentRoute.fa : "Nothing listed"}</p>
       </div>
     </div>
   )
