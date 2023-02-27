@@ -1,6 +1,7 @@
 body {
   color: rgba(9, 106, 46, 0.85);
   font-family: 'Nunito';
+  font-weight: bolder;
   margin: 0;
   /* font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

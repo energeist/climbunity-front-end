@@ -21,21 +21,21 @@ function ClimbingRouteDetails(props) {
       </div>
       <div className="ClimbingRouteDetails-info">
         <h1 className="ClimbingRouteDetails-name">{currentRoute.name}</h1>
-        <p className="ClimbingRouteDetails-grade">Grade: 
-          {currentRoute.grades.yds ? <span> YDS - {currentRoute.grades.yds} | </span> : ''}  
-          {currentRoute.grades.french ? <span>French - {currentRoute.grades.french}</span> : ''} 
+        <p className="ClimbingRouteDetails-grade"><strong>Grade:</strong> 
+          {currentRoute.grades.yds ? <span><strong>YDS</strong>  - {currentRoute.grades.yds} | </span> : ''}  
+          {currentRoute.grades.french ? <span><strong>French</strong>  - {currentRoute.grades.french}</span> : ''} 
         </p>
-        <p className="ClimbingRouteDetails-grade">Route type(s): {Object.keys(currentRoute.type)
+        <p className="ClimbingRouteDetails-grade"><strong>Route type(s):</strong> {Object.keys(currentRoute.type)
           .map((type)=>{
             return(
              <span>{type}</span> 
             )
           })}</p>
-        <p className="ClimbingRouteDetails-desc">Description: {currentRoute.content.description}</p>
-        <p className="ClimbingRouteDetails-desc">Location: {currentRoute.content.location}</p>
-        <p className="ClimbingRouteDetails-desc">Protection: {currentRoute.content.protection}</p>
-        <p className="ClimbingRouteDetails-geo"><em>lat: </em>{currentRoute.metadata.lnglat.coordinates[1]} <em>lon: </em>{currentRoute.metadata.lnglat.coordinates[0]}</p>
-        <p className="ClimbingRouteDetails-fa">First Ascent By: {currentRoute.fa}</p>
+        <p className="ClimbingRouteDetails-desc"><strong>Description:</strong>  {currentRoute.content.description}</p>
+        <p className="ClimbingRouteDetails-desc"><strong>Location:</strong>  {currentRoute.content.location}</p>
+        <p className="ClimbingRouteDetails-desc"><strong>Protection:</strong>  {currentRoute.content.protection}</p>
+        <p className="ClimbingRouteDetails-geo"><em><strong>lat:</strong>  </em>{currentRoute.metadata.lnglat.coordinates[1]} <em>lon: </em>{currentRoute.metadata.lnglat.coordinates[0]}</p>
+        <p className="ClimbingRouteDetails-fa"><strong>First Ascent By:</strong>  {currentRoute.fa}</p>
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './ClimbingRoute.css';
 
@@ -7,9 +7,9 @@ function ClimbingRoute(props) {
   const location = useLocation()
   const wallKey = location.pathname.replace('/wall/','')
   const wallRoutes = allWalls[`${wallKey}`].climbs
-  let routes = wallRoutes.map((route, index) => {
+  const routes = wallRoutes.map((route, index) => {
     return (
-      <div className="routeList" key={route.name}>
+      <div className="RouteCard" key={route.name}>
         <Link 
           className="ClimbingRoute-title"
           to={`/route/${wallKey}-${index}-${(route.name).toLowerCase().split(' ').join('_')}`}
@@ -25,7 +25,7 @@ function ClimbingRoute(props) {
   })
 
   return (
-    <div className="routeList">
+    <div className="RouteList">
       {routes.length > 0 ? routes : "No results match your search"}
     </div>
   )
