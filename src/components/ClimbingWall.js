@@ -9,26 +9,18 @@ function ClimbingWall(props) {
   console.log("dataKeys")
   console.log(dataKeys)
   const data = Object.values(allWalls)
-  const filterWalls = data.filter((obj) => {
-    const inNamee = obj.area_name.toLowerCase().includes(query.toLowerCase())
-    return inNamee }).map((wall) => { return console.log(wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase())
-  })
-  // const wallSearch = allWalls.filter((obj) => {
-  //   const inName = obj.name.toLowerCase().includes(query.toLowerCase())
-  //   return inName }).map((key) => {return console.log(key)})
-  // console.log(wallSearch)
-  const walls = dataKeys.filter((obj) => {
-    const inName = true
-    return inName }).map((key) => {
+  const walls = data.filter((obj) => {
+    const inName = obj.area_name.toLowerCase().includes(query.toLowerCase())
+    return inName }).map((wall) => {
     return (
-      <div className="WallList" key={key}>
+      <div className="WallList" key={wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()}>
         <Link 
           className="ClimbingWall-title"
-          to={`/wall/${key}`}
+          to={`/wall/${wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()}`}
         >
-          <h1>{allWalls[key].area_name}</h1>
+          <h1>{allWalls[wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()].area_name}</h1>
         </Link>
-        <p>Number of routes: {allWalls[key].totalClimbs}</p>
+        <p>Number of routes: {allWalls[wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()].totalClimbs}</p>
       </div>
     )
   })
