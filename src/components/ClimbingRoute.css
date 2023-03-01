@@ -28,10 +28,24 @@
   object-fit: fill;
 }
 
-.RouteCard > p {
+.RouteCardContent {
+  padding: 2em;
+}
+
+.RouteCardContent > p {
   display: flex;
   flex-direction: column;
   margin: 1em;
+  font-size: 1.5em;
+  color: rgb(1, 51, 1);
+}
+
+.ClimbingRoute-title {
+  color: rgb(1, 51, 1)
+}
+
+.ClimbingRoute-title:visited {
+  color: darkolivegreen
 }
 
 .RouteCard > img {
@@ -43,8 +57,6 @@
   z-index: -1;
   opacity: 35%;
 }
-  
-
 
 .RouteSearch form input, .RouteSearch form button {
   padding: 1em;

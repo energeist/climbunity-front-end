@@ -12,6 +12,20 @@
   z-index: 1;
 }
 
+.AreaCardContent > p {
+  font-size: 1.5em;
+  color: rgb(1, 51, 1);
+  font-weight: bolder;
+}
+
+.AreaCardContent > a {
+  color: rgb(1, 51, 1)
+}
+
+.AreaCardContent > a:visited {
+  color: rgb(1, 51, 1)
+}
+
 .ClimbingArea > img {
   position: absolute;
   z-index: -1;

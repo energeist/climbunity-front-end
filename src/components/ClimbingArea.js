@@ -13,7 +13,7 @@ function ClimbingArea(props) {
           to={`/area/muir-valley`}>
           <h1>{areaName}</h1>
         </Link>
-        Number of walls: {numWalls}
+        <p>Number of walls: {numWalls}</p>
       </div>
     </div>
   )

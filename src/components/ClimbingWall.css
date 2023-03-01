@@ -30,15 +30,15 @@
   opacity: 35%;
 }
 
-.WallCard > a {
-  color: green
-}
-
-.WallCard > a:visited {
+.WallCardContent > a {
   color: rgb(1, 51, 1)
 }
 
-.WallCard > p {
+.WallCardContent > a:visited {
+  color: rgb(1, 51, 1)
+}
+
+.WallCardContent > p {
   font-size: 1.3em
 }
   
