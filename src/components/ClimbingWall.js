@@ -12,7 +12,7 @@ function ClimbingWall(props) {
     return (
       <div className="WallCard" key={wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join
       ('_').toLowerCase()} >
-        <img src={`${process.env.PUBLIC_URL}/images/wall6.jpg`} alt="placeholder" />
+        <img src={`${process.env.PUBLIC_URL}/images/wall${wall.area_name.length%7}.jpg`} alt="placeholder" />
         <div className="WallCardContent">
           <Link 
             className="ClimbingWall-title"

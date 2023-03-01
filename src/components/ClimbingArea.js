@@ -6,7 +6,7 @@ function ClimbingArea(props) {
   const {areaName, numWalls} = props
   return (
     <div className="ClimbingArea">
-      <img src={`${process.env.PUBLIC_URL}/images/wall6.jpg`} alt="placeholder" />
+      <img src={`${process.env.PUBLIC_URL}/images/area${areaName.length%4}.jpg`} alt="placeholder" />
       <div className="AreaCardContent">
         <Link 
           className="ClimbingArea-title"

@@ -18,7 +18,7 @@ function ClimbingRoute(props) {
     return inName || inYDSGrade || inFrenchGrade || inType }).map((route, index) => {
     return (
       <div className="RouteCard" key={route.name}>
-          <img src={`${process.env.PUBLIC_URL}/images/wall6.jpg`} alt="placeholder" />
+          <img src={`${process.env.PUBLIC_URL}/images/wall${route.name.length%7}.jpg`} alt="placeholder" />
           <div className="RouteCardContent">
             <Link 
               className="ClimbingRoute-title"
