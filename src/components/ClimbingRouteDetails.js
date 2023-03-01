@@ -7,11 +7,12 @@ function ClimbingRouteDetails(props) {
   const location = useLocation()
   const wallKey = location.pathname.replace('/route/','').split('-')[0]
   const routeKey = location.pathname.replace('/route/','').split('-')[1]
+  console.log(routeKey)
   const currentRoute = props.props[`${wallKey}`].climbs[routeKey]
   return (
     <div className="ClimbingRouteDetails">
       <div className="ClimbingRouteDetails-image">
-        <img src={`${process.env.PUBLIC_URL}/images/no_image.jpeg`} alt="placeholder"/>
+        <img src={`${process.env.PUBLIC_URL}/images/wall${routeKey%7}.jpg`} alt="placeholder"/>
       </div>
       <div className="ClimbingRouteDetails-info">
         <h1 className="ClimbingRouteDetails-name">{currentRoute.name}</h1>

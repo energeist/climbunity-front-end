@@ -1,59 +1,81 @@
 .RouteList {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1em;
-    width: calc(100% - 80px);
-    max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2.5em;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2em;
+}
+
+.RouteCard {
+  width: 260px;
+  height: 260px;
+  margin: auto;
+  border: 4px solid rgba(126, 124, 124, 0.6);
+  border-radius: 1%;
+  box-shadow: 8px 5px 5px rgb(231, 194, 159);
+  background-color: rgb(223, 202, 177);
+  position: relative;
+  z-index: 1;
+}
+
+.RouteCard > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 35%;
+  object-fit: fill;
+}
+
+.RouteCard > p {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.RouteCard > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 35%;
+}
+  
+
+
+.RouteSearch form input, .RouteSearch form button {
+  padding: 1em;
+  margin: 0;
+  border: 1px solid;
+  font-size: 1rem;
+}
+
+.RouteSearch form input {
+  min-width: 100px;
+  width: 80%;
+}
+
+.RouteSearch form input {
+  flex: 1;
+}
+
+/* smaller screens and tbalets */
+@media only screen and (max-width: 960px) {
+  .RouteList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small screens mobile */
+@media only screen and (max-width: 700px) {
+  .RouteList {
+    grid-template-columns: 1fr;
+  }
+  .RouteSearch {
+    flex: 1;
     margin: auto;
-    padding: 1em 2em 2em 2em;
   }
-  
-  /* smaller screens and tbalets */
-  @media only screen and (max-width: 960px) {
-    .RouteList {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  /* Small screens mobile */
-  @media only screen and (max-width: 700px) {
-      .RouteList {
-          grid-template-columns: 1fr;
-      }
-      .RouteSearch {
-      flex: 1;
-      margin: auto;
-    }
-  }
-  
-  .RouteSearch form {
-      display: flex;
-      align-items: center;
-  }
-  
-  .RouteSearch form input, .RouteSearch form button {
-      padding: 1em;
-      margin: 0;
-      border: 1px solid;
-      font-size: 1rem;
-  }
-  
-  .RouteSearch form input {
-    min-width: 100px;
-      margin-left: 2.5em;
-  }
-  
-  .RouteSearch form button {
-      margin-right: 2.5em;
-  }
-  
-  .RouteSearch form input {
-      flex: 1;
-      /* border-top-left-radius: 0.5em;
-      border-bottom-left-radius: 0.5em; */
-  }
-  
-  /* .WallSearch form button {
-      border-top-right-radius: 0.5em;
-      border-bottom-right-radius: 0.5em;
-  } */
+}

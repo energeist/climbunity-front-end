@@ -31,6 +31,7 @@
 
 .ClimbingRouteDetails .ClimbingRouteDetails-image img {
 	width: 100%;
+	max-width: 620px;
 }
 
 .ClimbingRouteDetails .ClimbingRouteDetails-hours {

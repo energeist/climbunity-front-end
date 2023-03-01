@@ -9,8 +9,9 @@
     padding: 1em;
     margin-bottom: 1em;
     background-color: rgb(255, 255, 255);
-    color: #096A2E;
-    color: rgba(9, 106, 46, 0.85);
+    /* color: #096A2E; */
+    color: rgba(8, 88, 39, 0.85);
+    background-color: rgb(231, 222, 211);
     font-family: 'Nunito';
   }
   

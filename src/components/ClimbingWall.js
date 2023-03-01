@@ -10,14 +10,18 @@ function ClimbingWall(props) {
     const inName = obj.area_name.toLowerCase().includes(query.toLowerCase())
     return inName }).map((wall) => {
     return (
-      <div className="WallList" key={wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()}>
-        <Link 
-          className="ClimbingWall-title"
-          to={`/wall/${wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()}`}
-        >
-          <h1>{allWalls[wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()].area_name}</h1>
-        </Link>
-        <p>Number of routes: {allWalls[wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()].totalClimbs}</p>
+      <div className="WallCard" key={wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join
+      ('_').toLowerCase()} >
+        <img src={`${process.env.PUBLIC_URL}/images/wall6.jpg`} alt="placeholder" />
+        <div className="WallCardContent">
+          <Link 
+            className="ClimbingWall-title"
+            to={`/wall/${wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()}`}
+            >
+            <h1>{allWalls[wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()].area_name}</h1>
+          </Link>
+          <p>Number of routes: {allWalls[wall.area_name.replaceAll(',','').replaceAll("'",'').split(' ').join('_').toLowerCase()].totalClimbs}</p>
+        </div>
       </div>
     )
   })
