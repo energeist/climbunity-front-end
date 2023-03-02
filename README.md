@@ -9,7 +9,7 @@ ACS-1320 Final Project
 
 - Climbunity is a React app that currently showcases the climbing areas and routes in the Red River Gorge region of Kentucky, USA.
 - Data is fully available for the Muir Valley area in "The Red" and will be expanded to eventually include all areas of The Red, or potentially even more regions and states.  All other areas on the front page are hard-coded to go to the Muir Valley.
-- Images are randomly assigned to areas / walls / climbing routes based on a chosen key
+- Random images are programmatically assigned to areas / walls / climbing routes based on a chosen key
 - Built in React, uses react-router for navigation
 
 [Wireframes can be found here](https://github.com/energeist/climbunity-front-end/blob/master/climbunity-wireframes.pdf)
