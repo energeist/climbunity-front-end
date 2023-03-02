@@ -13,7 +13,7 @@ ACS-1320 Final Project
 - Built in React, uses react-router for navigation
 
 ## Project structure
-
+```
 |- /public
   |- /images
     |- images.jpg
@@ -44,7 +44,7 @@ ACS-1320 Final Project
 |- README.md
 |- package.json
 |- pagkage-lock.json
-
+```
 
 
 ## Available Scripts
