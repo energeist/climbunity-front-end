@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/climbunity-front-end/static/css/main.9a0ea682.css",
+    "main.css": "/climbunity-front-end/static/css/main.f368f5b0.css",
     "main.js": "/climbunity-front-end/static/js/main.9e540c75.js",
     "static/js/787.32ef307f.chunk.js": "/climbunity-front-end/static/js/787.32ef307f.chunk.js",
     "static/media/logo-no-background.png": "/climbunity-front-end/static/media/logo-no-background.a1b9e3ba03f496f44b81.png",
     "index.html": "/climbunity-front-end/index.html",
-    "main.9a0ea682.css.map": "/climbunity-front-end/static/css/main.9a0ea682.css.map",
+    "main.f368f5b0.css.map": "/climbunity-front-end/static/css/main.f368f5b0.css.map",
     "main.9e540c75.js.map": "/climbunity-front-end/static/js/main.9e540c75.js.map",
     "787.32ef307f.chunk.js.map": "/climbunity-front-end/static/js/787.32ef307f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a0ea682.css",
+    "static/css/main.f368f5b0.css",
     "static/js/main.9e540c75.js"
   ]
 }
