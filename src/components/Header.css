@@ -29,6 +29,7 @@
   .Header-Buttons {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
   
   .Header a {

@@ -7,7 +7,6 @@ function ClimbingRouteDetails(props) {
   const location = useLocation()
   const wallKey = location.pathname.replace('/route/','').split('-')[0]
   const routeKey = location.pathname.replace('/route/','').split('-')[1]
-  console.log(routeKey)
   const currentRoute = props.props[`${wallKey}`].climbs[routeKey]
   return (
     <div className="ClimbingRouteDetails">

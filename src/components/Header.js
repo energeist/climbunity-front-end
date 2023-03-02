@@ -9,7 +9,6 @@ function Header() {
   };
   const location = useLocation()
   const navigate = useNavigate()
-  console.log(location.pathname)
   return (
     <div className='Header'>
       <header>
@@ -18,28 +17,26 @@ function Header() {
           Climbing in the Red River Gorge
         </div>
         <div className="Header-Buttons">
-          <div>
+          <NavLink 
+            className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
+            to="/"
+            >
+              Climbing Areas
+          </NavLink>
+          <NavLink 
+            className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
+            to="/about"
+            >
+              About Climbunity
+          </NavLink>
+          { location.pathname === '/' ? '' :
             <NavLink 
-              className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
-              to="/"
+              className="nav-link"
+              onClick={handleClick}
               >
-                Climbing Areas
+                Go Back
             </NavLink>
-            <NavLink 
-              className={({ isActive }) => isActive ? "nav-link-active" : "nav-link" }
-              to="/about"
-              >
-                About Climbunity
-            </NavLink>
-            { location.pathname === '/' ? '' :
-              <NavLink 
-                className="nav-link"
-                onClick={handleClick}
-                >
-                  Go Back
-              </NavLink>
-            }
-          </div>
+          }
         </div>
       </header>
     </div>

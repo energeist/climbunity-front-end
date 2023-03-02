@@ -18,19 +18,19 @@ function ClimbingRoute(props) {
     return inName || inYDSGrade || inFrenchGrade || inType }).map((route, index) => {
     return (
       <div className="RouteCard" key={route.name}>
-          <img src={`${process.env.PUBLIC_URL}/images/wall${route.name.length%7}.jpg`} alt="placeholder" />
-          <div className="RouteCardContent">
-            <Link 
-              className="ClimbingRoute-title"
-              to={`/route/${wallKey}-${routeNames.indexOf(route.name)}-${(route.name).toLowerCase().split(' ').join('_')}`}
-            >
-              <h1>{route.name}</h1>
-            </Link>
-            <p>Grade: 
-              {route.grades.yds ? <span>YDS - {route.grades.yds}</span> : ''}
-              {route.grades.french ? <span>French - {route.grades.french}</span> : ''}
-            </p>
-          </div>
+        <img src={`${process.env.PUBLIC_URL}/images/wall${route.name.length%7}.jpg`} alt="placeholder" />
+        <div className="RouteCardContent">
+          <Link 
+            className="ClimbingRoute-title"
+            to={`/route/${wallKey}-${routeNames.indexOf(route.name)}-${(route.name).toLowerCase().split(' ').join('_')}`}
+          >
+            <h1>{route.name}</h1>
+          </Link>
+          <p>Grade: 
+            {route.grades.yds ? <span>YDS - {route.grades.yds}</span> : ''}
+            {route.grades.french ? <span>French - {route.grades.french}</span> : ''}
+          </p>
+        </div>
       </div>
     )
   })
@@ -40,7 +40,7 @@ function ClimbingRoute(props) {
       <form>
         <input
           value={query}
-          placeholder="Search this page:"
+          placeholder="Search routes by name, style or grade:"
           onChange={(evt) => setQuery(evt.target.value)}
         />
       </form>

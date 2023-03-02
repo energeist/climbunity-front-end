@@ -31,7 +31,7 @@ function ClimbingWall(props) {
       <form>
         <input
           value={query}
-          placeholder="Search this page:"
+          placeholder="Search walls by name:"
           onChange={(evt) => setQuery(evt.target.value)}
         />
       </form>
