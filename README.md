@@ -1,8 +1,9 @@
 ![image](https://user-images.githubusercontent.com/111889289/222542161-8ee6e2e0-e5e4-4554-997b-078c9fb9e5d1.png)
 
 # CLIMBUNITY
-## Created by: Mark Rattle
-## ACS-1320 Final Project
+
+### Created by: Mark Rattle
+ACS-1320 Final Project
 
 [Hosted on Github Pages!](https://energeist.github.io/climbunity-front-end/)
 
@@ -10,6 +11,41 @@
 - Data is fully available for the Muir Valley area in "The Red" and will be expanded to eventually include all areas of The Red, or potentially even more regions and states.
 - Images are randomly assigned to areas / walls / climbing routes based on a chosen key
 - Built in React, uses react-router for navigation
+
+## Project structure
+
+|- /public
+  |- /images
+    |- images.jpg
+  |- favicon.ico
+  |- index.html
+|- /src
+  |- /compononets
+    |- About.css
+    |- About.js
+    |- App.css
+    |- App.js
+    |- ClimbingArea.css
+    |- ClimbingArea.js
+    |- ClimbingRoute.css
+    |- ClimbingRoute.js
+    |- ClimbingRouteDetails.css
+    |- ClimbingRouteDetails.js
+    |- ClimbingWall.css
+    |- ClimbingWall.js
+    |- Footer.css
+    |- Footer.js
+    |- Header.css
+    |- Header.js
+  |- /data
+    |- 33 json files
+  |- index.css
+  |- index.js
+|- README.md
+|- package.json
+|- pagkage-lock.json
+
+
 
 ## Available Scripts
 
