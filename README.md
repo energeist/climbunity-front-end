@@ -12,7 +12,7 @@ ACS-1320 Final Project
 - Images are randomly assigned to areas / walls / climbing routes based on a chosen key
 - Built in React, uses react-router for navigation
 
-[Wireframes can be found here]([https://energeist.github.io/climbunity-front-end/](https://github.com/energeist/climbunity-front-end/blob/master/climbunity-wireframes.pdf))
+[Wireframes can be found here](https://github.com/energeist/climbunity-front-end/blob/master/climbunity-wireframes.pdf)
 
 ## Project structure
 ```
