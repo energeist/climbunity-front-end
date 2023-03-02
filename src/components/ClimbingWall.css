@@ -31,15 +31,16 @@
 }
 
 .WallCardContent > a {
-  color: rgb(1, 51, 1)
+  color: rgb(1, 71, 1)
 }
 
 .WallCardContent > a:visited {
-  color: rgb(1, 51, 1)
+  color: darkolivegreen;
 }
 
 .WallCardContent > p {
-  font-size: 1.3em
+  font-size: 1.3em;
+  color: rgb(0,44,0);
 }
   
 /* smaller screens and tbalets */
